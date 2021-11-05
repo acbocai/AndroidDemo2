@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "enable": true,
+  "report_num": 10,
+  "package": ["com.whulzz.demo", "com.example.demo"],
+  "objs": {
+    "java": {
+      "libcore.io.IoBridge": ["open"],
+      "android.app.ApplicationPackageManager": ["getInstalledApplications", "getInstalledPackages"],
+      "android.widget.Toast": ["show"]
+    }
+  }
+}

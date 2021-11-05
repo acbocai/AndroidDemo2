@@ -1,0 +1,54 @@
+cmake_minimum_required(VERSION 3.10.2)
+project("lzma-c")
+
+add_library(lzmac
+        OBJECT
+        7zAlloc.c
+        7zArcIn.c
+        7zBuf2.c
+        7zBuf.c
+        7zCrc.c
+        7zCrcOpt.c
+        7zDec.c
+        7zFile.c
+        7zStream.c
+        Aes.c
+        AesOpt.c
+        Alloc.c
+        Bcj2.c
+        Bra86.c
+        Bra.c
+        BraIA64.c
+        CpuArch.c
+        Delta.c
+        LzFind.c
+        Lzma2Dec.c
+        Lzma2Enc.c
+        Lzma86Dec.c
+        Lzma86Enc.c
+        LzmaDec.c
+        LzmaEnc.c
+        LzmaLib.c
+        Ppmd7.c
+        Ppmd7Dec.c
+        Ppmd7Enc.c
+        Sha256.c
+        Sort.c
+        Xz.c
+        XzCrc64.c
+        XzCrc64Opt.c
+        XzDec.c
+        XzEnc.c
+        XzIn.c
+        )
+
+add_definitions(-D_7ZIP_ST)
+
+target_compile_options(lzmac
+        PRIVATE
+        -Wall
+        "-Wno-empty-body"
+        "-Wno-self-assign"
+        )
+
+#SET_TARGET_PROPERTIES(lzmac PROPERTIES OUTPUT_NAME lzmac)
